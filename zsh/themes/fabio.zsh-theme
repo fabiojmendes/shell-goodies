@@ -9,7 +9,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN=")"
 : ${ZSH_THEME_SHOW_HOST:=false}
 
 function _set_user_prompt() {
-	local ret_status='%(?:%{$fg_bold[green]%}➜:%{$fg_bold[red]%}➜)%{$reset_color%}'
+	local ret_status='%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )%{$reset_color%}'
 
 	local user_and_host='%(!:%{$fg[magenta]%}:%{$fg[green]%})%n'
 	if [[ "$ZSH_THEME_SHOW_HOST" == true ]]; then
