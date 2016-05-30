@@ -15,7 +15,7 @@ function _set_user_prompt() {
 	if [[ "$ZSH_THEME_SHOW_HOST" == true ]]; then
 		user_and_host+='@%m'
 	fi
-	
+
 	PROMPT="${ret_status} ${user_and_host}:%{$ZSH_THEME_DIR_COLOR%}%2~%{$reset_color%} \$(git_prompt_info)"
 }
 
