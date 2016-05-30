@@ -4,12 +4,16 @@ require_relative 'userdata.rb'
 CONFIG_PATH = "#{FAKE_CLOUD_HOME}/conf/config.yml"
 
 def load_config
-  puts "Loading config #{CONFIG_PATH}"
+  puts "Loading config file #{CONFIG_PATH}"
   cfg = OpenStruct.new(YAML.load_file(CONFIG_PATH))
   cfg.hosts ||= {}
   cfg.mtime = File.mtime(CONFIG_PATH)
-  puts cfg
+  puts cfg.to_h
   return cfg
+end
+
+trap 'HUP' do
+  config = load_config()
 end
 
 config = load_config()
