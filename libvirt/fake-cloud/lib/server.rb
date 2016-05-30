@@ -7,6 +7,7 @@ def load_config
   puts "Loading config file #{CONFIG_PATH}"
   cfg = OpenStruct.new(YAML.load_file(CONFIG_PATH))
   cfg.hosts ||= {}
+  cfg.auth_keys ||= []
   cfg.mtime = File.mtime(CONFIG_PATH)
   puts cfg.to_h
   return cfg

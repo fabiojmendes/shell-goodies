@@ -1,16 +1,33 @@
-require 'yaml'
-require 'base64'
+  require 'yaml'
+  require 'base64'
 
-class UserData
+  class UserData
 
-  def initialize(hostname, default_password, public_ip, private_ip=public_ip)
-    @hostname = hostname
-	@default_password = default_password
-    @public_ip =  public_ip
-    @private_ip = private_ip
-  end
+    def initialize(hostname, default_password, public_ip, private_ip=public_ip)
+      @hostname = hostname
+      @default_password = default_password
+      @public_ip =  public_ip
+      @private_ip = private_ip
+    end
 
-  def generate
+    def generate
+      user_data = {
+        'password' => @default_password,
+        'chpasswd' => {
+          'expire' => false
+        }
+      }
+
+      write_files = encode_files()
+      if !write_files.empty?
+        user_data['write-files'] = write_files
+      end
+      out = "#cloud-config\n"
+      out << user_data.to_yaml
+      return out
+    end
+
+  def encode_files
     write_files = []
     if !Dir["#{FAKE_CLOUD_HOME}/write.d"].empty?
       Dir.chdir "#{FAKE_CLOUD_HOME}/write.d" do
@@ -25,17 +42,7 @@ class UserData
         end
       end
     end
-
-    user_data = {
-      'password' => @default_password,
-      'chpasswd' => {
-        'expire' => false
-      },
-      'write-files' => write_files
-	}
-
-    out = "#cloud-config\n"
-    out << user_data.to_yaml
-    return out
+    return write_files
   end
+
 end
