@@ -1,0 +1,13 @@
+#!/bin/bash
+
+network_name=$1
+action=$2
+begin=$3
+
+echo "Network script: $network_name $started $begin" >&2
+
+if [[ "$network_name" == "default" && "$action" == "started" ]]; then
+  #iptables -D FORWARD -o virbr0 -j REJECT --reject-with icmp-port-unreachable
+  #iptables -D FORWARD -i virbr0 -j REJECT --reject-with icmp-port-unreachable
+  iptables -R FORWARD 1 -d 192.168.122.0/24 -o virbr0 -m conntrack --ctstate NEW,RELATED,ESTABLISHED -j ACCEPT
+fi

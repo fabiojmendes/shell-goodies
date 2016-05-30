@@ -1,0 +1,18 @@
+[Unit]
+Description=Fake Cloud Service
+After=network.target
+Before=libvirtd.service
+
+[Service]
+Environment="BIND_ADDR=169.254.169.254"
+Environment="PORT=80"
+
+WorkingDirectory=/srv/fake-cloud
+
+ExecStartPre=/usr/sbin/ip addr add ${BIND_ADDR}/32 dev lo
+ExecStart=/srv/fake-cloud/bin/fake-cloud -p $PORT -o $BIND_ADDR
+ExecStopPost=/usr/sbin/ip addr del ${BIND_ADDR}/32 dev lo
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

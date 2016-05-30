@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require 'sinatra'
+set :views, settings.root
+puts "Initializing fake-cloud service"
+
+FAKE_CLOUD_HOME = File.dirname(__FILE__) + '/..'
+
+trap 'HUP' do
+  puts 'HUP received'
+end
+
+require_relative '../lib/server.rb'
