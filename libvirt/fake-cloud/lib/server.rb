@@ -1,6 +1,29 @@
 require 'sinatra'
 require_relative 'userdata.rb'
 
+CONFIG_PATH = "#{FAKE_CLOUD_HOME}/conf/config.yml"
+
+def load_config
+  puts "Loading config #{CONFIG_PATH}"
+  cfg = OpenStruct.new(YAML.load_file(CONFIG_PATH))
+  cfg.hosts ||= {}
+  cfg.mtime = File.mtime(CONFIG_PATH)
+  puts cfg
+  return cfg
+end
+
+config = load_config()
+
+before do
+  if config.mtime != File.mtime(CONFIG_PATH)
+    config = load_config()
+  end
+  node_id = "node#{request.ip.split('.').last}"
+  @host = OpenStruct.new(config.hosts[node_id])
+  @host.id = node_id
+  @host.name ||= node_id
+end
+
 get '/' do
   '2009-04-04'
 end
@@ -10,15 +33,19 @@ get '/2009-04-04/' do
 end
 
 get '/2009-04-04/meta-data/' do
-  ['local-hostname', 'instance-id', 'public-keys', 'local-ipv4', 'network-interfaces'].join("\n")
+  opts = ['local-hostname', 'instance-id', 'public-keys', 'local-ipv4']
+  if @host.enable_eth1
+    opts.push('network-interfaces')
+  end
+  opts.join("\n")
 end
 
 get '/2009-04-04/meta-data/instance-id' do
-  instance_id
+  "iid-#{@host.id}"
 end
 
 get '/2009-04-04/meta-data/local-hostname' do
-  hostname
+  @host.name
 end
 
 get '/2009-04-04/meta-data/local-ipv4' do
@@ -30,30 +57,15 @@ get '/2009-04-04/meta-data/public-ipv4' do
 end
 
 get '/2009-04-04/meta-data/public-keys' do
-  IO.read("#{FAKE_CLOUD_HOME}/conf/key.pem")
+  config.auth_keys.join("\n")
 end
 
 get '/2009-04-04/meta-data/network-interfaces' do
-  'iface eth1 inet dhcp'
+  if @host.enable_eth1
+    'iface eth1 inet dhcp'
+  end
 end
 
 get '/2009-04-04/user-data' do
-  UserData.new(node_id, node_id, request.ip).generate
-end
-
-def node_id
-  "node#{request.ip.split('.').last}"
-end
-
-def instance_id
-  "iid-#{node_id}"
-end
-
-def hostname
-  hostnames = YAML.load_file("#{FAKE_CLOUD_HOME}/conf/hostnames.yml")
-  if hostnames[node_id]
-    return hostnames[node_id]
-  else
-    return node_id
-  end
+  UserData.new(@host.id, config.default_password, request.ip).generate
 end
