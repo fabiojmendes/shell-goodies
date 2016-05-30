@@ -1,0 +1,11 @@
+begin
+  require 'wirble'
+
+  # init wirble
+  Wirble.init
+rescue LoadError => err
+  $stderr.puts "Couldn't load Wirble: #{err}"
+end
+
+# enable color
+Wirble.colorize
