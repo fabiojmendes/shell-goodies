@@ -1,5 +1,5 @@
 require 'sinatra'
-require_relative 'userdata.rb'
+require 'userdata'
 
 CONFIG_PATH = "#{FAKE_CLOUD_HOME}/conf/config.yml"
 
