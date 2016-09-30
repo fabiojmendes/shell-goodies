@@ -2,7 +2,7 @@
 syntax enable
 set background=dark
 set nocompatible
-" set mouse=a
+set mouse=a
 
 " Search
 set hlsearch
@@ -20,4 +20,4 @@ set backspace=indent,eol,start
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 " MatchParen colors
-highlight MatchParen cterm=bold ctermbg=blue guibg=blue
+highlight MatchParen cterm=underline ctermfg=red ctermbg=none
