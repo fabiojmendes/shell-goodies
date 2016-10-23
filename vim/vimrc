@@ -4,6 +4,14 @@ set background=dark
 set nocompatible
 set mouse=a
 
+set modeline
+set laststatus=2
+set noshowmode
+
+" Airline
+let g:airline_theme='bubblegum'
+" let g:airline#extensions#tabline#enabled = 1
+
 " Search
 set hlsearch
 set incsearch
