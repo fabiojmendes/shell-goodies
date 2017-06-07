@@ -1,0 +1,128 @@
+# vim: ft=conf
+
+BoldAsFont=yes
+Transparency=off
+OpaqueWhenFocused=no
+Columns=140
+Rows=30
+Term=xterm-256color
+ClicksPlaceCursor=yes
+BellType=0
+BellFlash=no
+FontSmoothing=default
+BoldAsColour=yes
+CursorType=underscore
+ScrollbackLines=50000
+FontHeight=10
+Font=Lucida Console
+
+# Themes from https://github.com/oumu/mintty-color-schemes
+
+# # mintty-color-schemes/base16-eighties-mod.minttyrc
+# ForegroundColour=211,208,200
+# BackgroundColour=45,45,45
+# CursorColour=253,157,79
+# Black=45,45,45
+# BoldBlack=116,115,105
+# Red=242,119,122
+# BoldRed=236,50,53
+# Green=153,204,153
+# BoldGreen=102,177,102
+# Yellow=255,204,102
+# BoldYellow=255,177,24
+# Blue=102,153,204
+# BoldBlue=57,114,173
+# Magenta=204,153,204
+# BoldMagenta=177,102,177
+# Cyan=102,204,204
+# BoldCyan=57,173,173
+# White=211,208,200
+# BoldWhite=242,240,236
+
+# # mintty-color-schemes/base16-default-mod-lighten.minttyrc
+# ForegroundColour=208,208,208
+# BackgroundColour=21,21,21
+# CursorColour=253,157,79
+# Black=21,21,21
+# BoldBlack=80,80,80
+# Red=172,65,66
+# BoldRed=194,94,94
+# Green=144,169,89
+# BoldGreen=166,187,123
+# Yellow=244,191,117
+# BoldYellow=248,213,165
+# Blue=106,159,181
+# BoldBlue=140,181,198
+# Magenta=170,117,159
+# BoldMagenta=190,149,181
+# Cyan=117,181,170
+# BoldCyan=151,199,190
+# White=208,208,208
+# BoldWhite=245,245,245
+
+# # mintty-color-schemes/base16-tomorrow-mod.minttyrc
+# ForegroundColour=197,200,198
+# BackgroundColour=29,31,33
+# CursorColour=253,157,79
+# Black=29,31,33
+# BoldBlack=150,152,150
+# Red=204,102,102
+# BoldRed=173,57,57
+# Green=181,189,104
+# BoldGreen=142,150,66
+# Yellow=240,198,116
+# BoldYellow=234,171,47
+# Blue=129,162,190
+# BoldBlue=82,125,159
+# Magenta=178,148,187
+# BoldMagenta=145,100,157
+# Cyan=138,190,183
+# BoldCyan=90,162,152
+# White=197,200,198
+# BoldWhite=255,255,255
+
+# # base16-mintty/mintty/base16-tomorrow-night.minttyrc
+# ForegroundColour=197,200,198
+# BackgroundColour=29,31,33
+# CursorColour=197,200,198
+# Black=29,31,33
+# BoldBlack=150,152,150
+# Red=204,102,102
+# BoldRed=222,147,95
+# Green=181,189,104
+# BoldGreen=40,42,46
+# Yellow=240,198,116
+# BoldYellow=55,59,65
+# Blue=129,162,190
+# BoldBlue=180,183,180
+# Magenta=178,148,187
+# BoldMagenta=224,224,224
+# Cyan=138,190,183
+# BoldCyan=163,104,90
+# White=197,200,198
+# BoldWhite=255,255,255
+
+# bricemathieu/mintty-one-dark
+ForegroundColour=171,178,191
+#BackgroundColour=30,33,39
+BackgroundColour= 40,44,52
+CursorColour=97,175,239
+#BoldBlack=92,99,112
+#Black=92,99,112
+BoldBlack=40,44,52
+Black=40,44,52
+BoldRed=224,108,117
+Red=224,108,117
+BoldGreen=152,195,121
+Green=152,195,121
+BoldYellow=209,154,102
+Yellow=209,154,102
+BoldBlue=97,175,239
+Blue=97,175,239
+BoldMagenta=198,120,221
+Magenta=198,120,221
+BoldCyan=86,182,194
+Cyan=86,182,194
+BoldWhite=171,178,191
+White=171,178,191
+CursorBlinks=yes
