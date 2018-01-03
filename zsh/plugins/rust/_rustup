@@ -6,12 +6,12 @@ _rustup() {
 
     local context curcontext="$curcontext" state line
     _arguments -s -S -C \
-"-v[Enable verbose output]" \
-"--verbose[Enable verbose output]" \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-v[Enable verbose output]' \
+'--verbose[Enable verbose output]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup_commands" \
 "*:: :->rustup" \
 && ret=0
@@ -21,55 +21,55 @@ _rustup() {
         case $line[1] in
             (show)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 && ret=0
 ;;
 (install)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__install_commands" \
 && ret=0
 ;;
 (uninstall)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__uninstall_commands" \
 && ret=0
 ;;
 (update)
 _arguments -s -S -C \
-"--no-self-update[Don't perform self update when running the `rustup` command]" \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'--no-self-update[Don'\''t perform self update when running the `rustup` command]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__update_commands" \
 && ret=0
 ;;
 (default)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__default_commands" \
 && ret=0
 ;;
 (toolchain)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__toolchain_commands" \
 "*:: :->toolchain" \
 && ret=0
@@ -79,72 +79,72 @@ case $state in
         case $line[1] in
             (list)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 && ret=0
 ;;
 (update)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__toolchain__install_commands" \
 && ret=0
 ;;
 (add)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__toolchain__install_commands" \
 && ret=0
 ;;
 (install)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__toolchain__install_commands" \
 && ret=0
 ;;
 (remove)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__toolchain__uninstall_commands" \
 && ret=0
 ;;
 (uninstall)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__toolchain__uninstall_commands" \
 && ret=0
 ;;
 (link)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__toolchain__link_commands" \
 && ret=0
 ;;
 (help)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 && ret=0
 ;;
         esac
@@ -153,10 +153,10 @@ esac
 ;;
 (target)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__target_commands" \
 "*:: :->target" \
 && ret=0
@@ -166,59 +166,59 @@ case $state in
         case $line[1] in
             (list)
 _arguments -s -S -C \
-"--toolchain+[Toolchain name, such as 'stable', 'nightly', or '1.8.0'. For more information see `rustup help toolchain`]" \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'--toolchain+[Toolchain name, such as '\''stable'\'', '\''nightly'\'', or '\''1.8.0'\''. For more information see `rustup help toolchain`]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 && ret=0
 ;;
 (install)
 _arguments -s -S -C \
-"--toolchain+[Toolchain name, such as 'stable', 'nightly', or '1.8.0'. For more information see `rustup help toolchain`]" \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'--toolchain+[Toolchain name, such as '\''stable'\'', '\''nightly'\'', or '\''1.8.0'\''. For more information see `rustup help toolchain`]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__target__add_commands" \
 && ret=0
 ;;
 (add)
 _arguments -s -S -C \
-"--toolchain+[Toolchain name, such as 'stable', 'nightly', or '1.8.0'. For more information see `rustup help toolchain`]" \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'--toolchain+[Toolchain name, such as '\''stable'\'', '\''nightly'\'', or '\''1.8.0'\''. For more information see `rustup help toolchain`]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__target__add_commands" \
 && ret=0
 ;;
 (uninstall)
 _arguments -s -S -C \
-"--toolchain+[Toolchain name, such as 'stable', 'nightly', or '1.8.0'. For more information see `rustup help toolchain`]" \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'--toolchain+[Toolchain name, such as '\''stable'\'', '\''nightly'\'', or '\''1.8.0'\''. For more information see `rustup help toolchain`]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__target__remove_commands" \
 && ret=0
 ;;
 (remove)
 _arguments -s -S -C \
-"--toolchain+[Toolchain name, such as 'stable', 'nightly', or '1.8.0'. For more information see `rustup help toolchain`]" \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'--toolchain+[Toolchain name, such as '\''stable'\'', '\''nightly'\'', or '\''1.8.0'\''. For more information see `rustup help toolchain`]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__target__remove_commands" \
 && ret=0
 ;;
 (help)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 && ret=0
 ;;
         esac
@@ -227,10 +227,10 @@ esac
 ;;
 (component)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__component_commands" \
 "*:: :->component" \
 && ret=0
@@ -240,41 +240,41 @@ case $state in
         case $line[1] in
             (list)
 _arguments -s -S -C \
-"--toolchain+[Toolchain name, such as 'stable', 'nightly', or '1.8.0'. For more information see `rustup help toolchain`]" \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'--toolchain+[Toolchain name, such as '\''stable'\'', '\''nightly'\'', or '\''1.8.0'\''. For more information see `rustup help toolchain`]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 && ret=0
 ;;
 (add)
 _arguments -s -S -C \
-"--toolchain+[Toolchain name, such as 'stable', 'nightly', or '1.8.0'. For more information see `rustup help toolchain`]" \
-"--target+[]" \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'--toolchain+[Toolchain name, such as '\''stable'\'', '\''nightly'\'', or '\''1.8.0'\''. For more information see `rustup help toolchain`]' \
+'--target+[]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__component__add_commands" \
 && ret=0
 ;;
 (remove)
 _arguments -s -S -C \
-"--toolchain+[Toolchain name, such as 'stable', 'nightly', or '1.8.0'. For more information see `rustup help toolchain`]" \
-"--target+[]" \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'--toolchain+[Toolchain name, such as '\''stable'\'', '\''nightly'\'', or '\''1.8.0'\''. For more information see `rustup help toolchain`]' \
+'--target+[]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__component__remove_commands" \
 && ret=0
 ;;
 (help)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 && ret=0
 ;;
         esac
@@ -283,10 +283,10 @@ esac
 ;;
 (override)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__override_commands" \
 "*:: :->override" \
 && ret=0
@@ -296,56 +296,56 @@ case $state in
         case $line[1] in
             (list)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 && ret=0
 ;;
 (add)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__override__set_commands" \
 && ret=0
 ;;
 (set)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__override__set_commands" \
 && ret=0
 ;;
 (remove)
 _arguments -s -S -C \
-"--path+[Path to the directory]" \
-"--nonexistent[Remove override toolchain for all nonexistent directories]" \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'--path+[Path to the directory]' \
+'--nonexistent[Remove override toolchain for all nonexistent directories]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 && ret=0
 ;;
 (unset)
 _arguments -s -S -C \
-"--path+[Path to the directory]" \
-"--nonexistent[Remove override toolchain for all nonexistent directories]" \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'--path+[Path to the directory]' \
+'--nonexistent[Remove override toolchain for all nonexistent directories]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 && ret=0
 ;;
 (help)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 && ret=0
 ;;
         esac
@@ -354,58 +354,58 @@ esac
 ;;
 (run)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__run_commands" \
 && ret=0
 ;;
 (which)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__which_commands" \
 && ret=0
 ;;
 (docs)
 _arguments -s -S -C \
-"--book[The Rust Programming Language book]" \
-"--std[Standard library API documentation]" \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'--book[The Rust Programming Language book]' \
+'--std[Standard library API documentation]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 && ret=0
 ;;
 (doc)
 _arguments -s -S -C \
-"--book[The Rust Programming Language book]" \
-"--std[Standard library API documentation]" \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'--book[The Rust Programming Language book]' \
+'--std[Standard library API documentation]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 && ret=0
 ;;
 (man)
 _arguments -s -S -C \
-"--toolchain+[Toolchain name, such as 'stable', 'nightly', or '1.8.0'. For more information see `rustup help toolchain`]" \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'--toolchain+[Toolchain name, such as '\''stable'\'', '\''nightly'\'', or '\''1.8.0'\''. For more information see `rustup help toolchain`]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__man_commands" \
 && ret=0
 ;;
 (self)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__self_commands" \
 "*:: :->self" \
 && ret=0
@@ -415,35 +415,35 @@ case $state in
         case $line[1] in
             (update)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 && ret=0
 ;;
 (uninstall)
 _arguments -s -S -C \
-"-y[]" \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-y[]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 && ret=0
 ;;
 (upgrade-data)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 && ret=0
 ;;
 (help)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 && ret=0
 ;;
         esac
@@ -452,10 +452,10 @@ esac
 ;;
 (telemetry)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__telemetry_commands" \
 "*:: :->telemetry" \
 && ret=0
@@ -465,34 +465,34 @@ case $state in
         case $line[1] in
             (enable)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 && ret=0
 ;;
 (disable)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 && ret=0
 ;;
 (analyze)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 && ret=0
 ;;
 (help)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 && ret=0
 ;;
         esac
@@ -501,10 +501,10 @@ esac
 ;;
 (set)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__set_commands" \
 "*:: :->set" \
 && ret=0
@@ -514,19 +514,19 @@ case $state in
         case $line[1] in
             (default-host)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__set__default-host_commands" \
 && ret=0
 ;;
 (help)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 && ret=0
 ;;
         esac
@@ -535,19 +535,19 @@ esac
 ;;
 (completions)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 "1:: :_rustup__completions_commands" \
 && ret=0
 ;;
 (help)
 _arguments -s -S -C \
-"-h[Prints help information]" \
-"--help[Prints help information]" \
-"-V[Prints version information]" \
-"--version[Prints version information]" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
 && ret=0
 ;;
         esac
