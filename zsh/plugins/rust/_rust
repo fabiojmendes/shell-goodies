@@ -1,0 +1,2 @@
+# rustup completions zsh > _rustup
+# cp $(rustc --print sysroot)/share/zsh/site-functions/_cargo ./
