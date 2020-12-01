@@ -1,6 +1,6 @@
 echo "Installing shell goodies"
 
-if [[ ! -n "$ZSH" ]]; then
+if [ ! -n "$ZSH" ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
@@ -11,11 +11,11 @@ if [ ! -d $VIM_PACK/vim-airline ]; then
 fi
 
 
-[[ -f $HOME/.toprc ]] || ln -s $HOME/.shell-goodies/dot-rc/toprc $HOME/.toprc
-[[ -f $HOME/.vimrc ]] || ln -s $HOME/.shell-goodies/vim/vimrc $HOME/.vimrc
-[[ -f $HOME/.tmux.conf ]] || ln -s $HOME/.shell-goodies/dot-rc/tmux.conf $HOME/.tmux.conf
+[ -f $HOME/.toprc ] || ln -s $HOME/.shell-goodies/dot-rc/toprc $HOME/.toprc
+[ -f $HOME/.vimrc ] || ln -s $HOME/.shell-goodies/vim/vimrc $HOME/.vimrc
+[ -f $HOME/.tmux.conf ] || ln -s $HOME/.shell-goodies/dot-rc/tmux.conf $HOME/.tmux.conf
 
-[[ "$(uname)" = "Linux" ]] && INPL='-i' || INPL='-i ""'
+[ "$(uname)" = "Linux" ] && INPL='-i' || INPL='-i ""'
 sed $INPL 's/ZSH_THEME=".*"/ZSH_THEME="fabio"/' $HOME/.zshrc
 sed $INPL 's/# ZSH_CUSTOM=.*/ZSH_CUSTOM=$HOME\/.shell-goodies\/zsh/' $HOME/.zshrc
 sed $INPL 's/plugins=(.*)/plugins=(dotenv)/' $HOME/.zshrc
