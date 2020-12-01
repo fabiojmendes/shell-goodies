@@ -19,7 +19,7 @@ fi
 sed $INPL \
   -e 's/ZSH_THEME=".*"/ZSH_THEME="fabio"/' \
   -e 's/# ZSH_CUSTOM=.*/ZSH_CUSTOM=$HOME\/.shell-goodies\/zsh/' \
-  -e 's/plugins=(.*)/plugins=(dotenv)/' \
+  -e 's/^plugins=(.*)/plugins=(dotenv)/' \
   $HOME/.zshrc
 
 grep -qe '^export EDITOR="vim"' $HOME/.zshrc || echo 'export EDITOR="vim"' >> $HOME/.zshrc
