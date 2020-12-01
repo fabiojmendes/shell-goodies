@@ -16,8 +16,9 @@ fi
 [ -f $HOME/.tmux.conf ] || ln -s $HOME/.shell-goodies/dot-rc/tmux.conf $HOME/.tmux.conf
 
 [ "$(uname)" = "Linux" ] && INPL="-i" || INPL="-i .bkp"
-sed $INPL 's/ZSH_THEME=".*"/ZSH_THEME="fabio"/' $HOME/.zshrc
-sed $INPL 's/# ZSH_CUSTOM=.*/ZSH_CUSTOM=$HOME\/.shell-goodies\/zsh/' $HOME/.zshrc
-sed $INPL 's/plugins=(.*)/plugins=(dotenv)/' $HOME/.zshrc
+sed $INPL \
+  's/ZSH_THEME=".*"/ZSH_THEME="fabio"/' \
+  's/# ZSH_CUSTOM=.*/ZSH_CUSTOM=$HOME\/.shell-goodies\/zsh/' \
+  's/plugins=(.*)/plugins=(dotenv)/' $HOME/.zshrc
 
 grep -qe '^export EDITOR="vim"' $HOME/.zshrc || echo 'export EDITOR="vim"' >> $HOME/.zshrc
