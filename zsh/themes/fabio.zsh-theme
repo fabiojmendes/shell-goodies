@@ -12,7 +12,7 @@ function _set_user_prompt() {
 
 	local user_and_host='%(!:%{$fg[magenta]%}:%{$fg[green]%})%n'
 	if [[ -n "$SSH_CONNECTION" ]]; then
-		user_and_host+='%{$fg_bold[grey]%}@%m'
+		user_and_host+='@%m'
 	fi
 
 	PROMPT="${ret_status} ${user_and_host}:%{$ZSH_THEME_DIR_COLOR%}%2~%{$reset_color%} \$(git_prompt_info)"
