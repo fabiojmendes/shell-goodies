@@ -1,7 +1,7 @@
 echo "Installing shell goodies"
 
 if [ ! -n "$ZSH" ]; then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 fi
 
 VIM_PACK="$HOME/.vim/pack/dist/start"
@@ -15,7 +15,7 @@ fi
 [ -f $HOME/.vimrc ] || ln -s .shell-goodies/vim/vimrc $HOME/.vimrc
 [ -f $HOME/.tmux.conf ] || ln -s .shell-goodies/dot-rc/tmux.conf $HOME/.tmux.conf
 
-[ "$(uname)" = "Linux" ] && INPL="-i" || INPL="-i .bkp"
+[ "$(uname)" = "Linux" ] && INPL="-i.bkp" || INPL="-i .bkp"
 sed $INPL \
   -e 's/ZSH_THEME=".*"/ZSH_THEME="fabio"/' \
   -e 's/# ZSH_CUSTOM=.*/ZSH_CUSTOM=$HOME\/.shell-goodies\/zsh/' \
