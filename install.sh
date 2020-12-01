@@ -1,3 +1,8 @@
+#!/bin/sh
+
+# Clone using
+# git clone https://github.com/fabiojmendes/shell-goodies .shell-goodies
+
 echo "Installing shell goodies"
 
 if [ ! -n "$ZSH" ]; then
