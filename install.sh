@@ -20,6 +20,11 @@ fi
 [ -f $HOME/.vimrc ] || ln -s .shell-goodies/vim/vimrc $HOME/.vimrc
 [ -f $HOME/.tmux.conf ] || ln -s .shell-goodies/dot-rc/tmux.conf $HOME/.tmux.conf
 
+if [ ! -f $HOME/.gdbinit ]; then
+  ln -s .shell-goodies/dot-rc/gdbinit $HOME/.gdbinit
+  curl -L -o ~/.gdb-dashboard https://git.io/.gdbinit
+fi
+
 [ "$(uname)" = "Linux" ] && INPL="-i.bkp" || INPL="-i .bkp"
 sed $INPL \
   -e 's/ZSH_THEME=".*"/ZSH_THEME="fabio"/' \
