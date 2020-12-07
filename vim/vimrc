@@ -10,8 +10,7 @@ set noshowmode
 
 " Airline
 let g:airline_theme='bubblegum'
-" let g:airline#extensions#tabline#enabled = 1
-let g:rustfmt_autosave = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " Search
 set hlsearch
@@ -26,7 +25,14 @@ set smartindent
 set cindent
 set backspace=indent,eol,start
 
-" <Ctrl-l> redraws the screen and removes any search highlighting.
-nnoremap <silent> <C-l> :nohl<CR><C-l>
 " MatchParen colors
 highlight MatchParen cterm=underline ctermfg=red ctermbg=none
+
+" Systemd unit files
+au BufNewFile,BufRead */systemd/*.{automount,mount,path,service,socket,swap,target,timer}* setf systemd
+
+" KeyBindings
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+" <Ctrl-l> redraws the screen and removes any search highlighting.
+nnoremap <silent> <C-l> :nohl<CR><C-l>
