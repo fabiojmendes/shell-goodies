@@ -46,7 +46,7 @@ install_link ".shell-goodies/dot-rc/gdbinit"
 if [[ ! -f $HOME/.gdb-dashboard ]]; then
   echo "Installing gdb-dashboard"
   curl -L -o $HOME/.gdb-dashboard https://git.io/.gdbinit
-fi:w
+fi
 
 [[ $(uname) == "Linux" ]] && INPL="-i.bkp" || INPL="-i .bkp"
 sed $INPL \
@@ -56,3 +56,5 @@ sed $INPL \
   $HOME/.zshrc
 
 grep -qe '^export EDITOR="vim"' $HOME/.zshrc || echo 'export EDITOR="vim"' >> $HOME/.zshrc
+
+echo "Done"
