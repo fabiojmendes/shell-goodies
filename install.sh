@@ -43,9 +43,9 @@ install_link ".shell-goodies/vim/vimrc"
 install_link ".shell-goodies/dot-rc/tmux.conf"
 install_link ".shell-goodies/dot-rc/gdbinit"
 
-if [[ ! -f $HOME/.gdb-dashboard ]]; then
-  echo "Installing gdb-dashboard"
-  curl -L -o $HOME/.gdb-dashboard https://git.io/.gdbinit
+if [[ ! -f $HOME/.gdb_dashboard ]]; then
+  echo "Installing gdb dashboard"
+  curl -L -o $HOME/.gdb_dashboard https://git.io/.gdbinit
 fi
 
 [[ $(uname) == "Linux" ]] && INPL="-i.bkp" || INPL="-i .bkp"

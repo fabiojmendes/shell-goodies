@@ -1,5 +1,4 @@
 # vim: ft=gdb
-source ~/.gdb-dashboard
 
 set breakpoint pending on
 set confirm off
@@ -10,6 +9,6 @@ set history size 10000
 set history remove-duplicates unlimited
 set history filename ~/.gdb_history
 
+source ~/.gdb_dashboard
 dashboard registers -style column-major True
 # dashboard registers -style list "ax bx cx dx sp bp di si pc eflags eax ebx ecx edx esp ebp edi esi eip"
-
