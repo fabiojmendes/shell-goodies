@@ -32,7 +32,8 @@ highlight MatchParen cterm=underline ctermfg=red ctermbg=none
 au BufNewFile,BufRead */systemd/*.{automount,mount,path,service,socket,swap,target,timer}* setf systemd
 
 " KeyBindings
-nnoremap <C-Left> :tabprevious<CR>
-nnoremap <C-Right> :tabnext<CR>
+" Move between buffers
+nnoremap <C-Left> :bprevious<CR>
+nnoremap <C-Right> :bnext<CR>
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>
