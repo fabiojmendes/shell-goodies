@@ -48,8 +48,7 @@ if [[ ! -f $HOME/.gdb_dashboard ]]; then
   curl -L -o $HOME/.gdb_dashboard https://git.io/.gdbinit
 fi
 
-[[ $(uname) == "Linux" ]] && INPL="-i.bkp" || INPL="-i .bkp"
-sed $INPL \
+sed -i.bkp \
   -e 's/ZSH_THEME=".*"/ZSH_THEME="fabio"/' \
   -e 's/# ZSH_CUSTOM=.*/ZSH_CUSTOM=$HOME\/.shell-goodies\/zsh/' \
   -e 's/^plugins=(.*)/plugins=(dotenv)/' \
