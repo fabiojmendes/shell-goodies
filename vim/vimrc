@@ -17,13 +17,11 @@ set hlsearch
 set incsearch
 
 " Identation
-set smarttab
-set shiftwidth=4
-set tabstop=4
+set expandtab
+set shiftwidth=2
+set softtabstop=2
 set autoindent
 set smartindent
-set cindent
-set backspace=indent,eol,start
 
 " MatchParen colors
 highlight MatchParen cterm=underline ctermfg=red ctermbg=none
