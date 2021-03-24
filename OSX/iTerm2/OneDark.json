@@ -36,11 +36,11 @@
   "Mouse Reporting" : true,
   "Cursor Boost" : 0,
   "Ansi 4 Color" : {
-    "Red Component" : 0.4392156862745098,
+    "Red Component" : 0.16876504942774773,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.94117647058823528,
+    "Blue Component" : 0.9852294921875,
     "Alpha Component" : 1,
-    "Green Component" : 0.73725490196078436
+    "Green Component" : 0.48211088728141072
   },
   "Non-ASCII Anti Aliased" : true,
   "Sync Title" : false,
@@ -54,7 +54,7 @@
     "telnet"
   ],
   "Scrollback Lines" : 0,
-  "Draw Powerline Glyphs" : false,
+  "Draw Powerline Glyphs" : true,
   "Brighten Bold Text" : true,
   "Flashing Bell" : false,
   "Cursor Guide Color" : {
@@ -64,7 +64,7 @@
     "Alpha Component" : 0.25,
     "Green Component" : 0.9268307089805603
   },
-  "BM Growl" : true,
+  "BM Growl" : false,
   "Ansi 3 Color" : {
     "Red Component" : 0.85765749216079712,
     "Color Space" : "sRGB",
@@ -231,16 +231,16 @@
     "Green Component" : 0.5992584228515625
   },
   "Use Bold Font" : true,
-  "Silence Bell" : false,
+  "Silence Bell" : true,
   "Ansi 12 Color" : {
-    "Red Component" : 0.6224517822265625,
+    "Red Component" : 0.37707518429762044,
     "Color Space" : "sRGB",
     "Blue Component" : 1,
     "Alpha Component" : 1,
-    "Green Component" : 0.84553034317483711
+    "Green Component" : 0.61491923105343571
   },
   "Window Type" : 0,
-  "Use Bright Bold" : true,
+  "Use Bright Bold" : false,
   "Has Hotkey" : false,
   "Cursor Text Color" : {
     "Red Component" : 0.72549019607843135,
@@ -265,7 +265,7 @@
     "Green Component" : 0.51200956106185913
   },
   "Name" : "OneDark",
-  "Blinking Cursor" : false,
+  "Blinking Cursor" : true,
   "Guid" : "501BCDEC-8322-463A-8179-866A4721A805",
   "Idle Code" : 0,
   "Ansi 10 Color" : {
@@ -351,8 +351,8 @@
     "Green Component" : 0.73193359375
   },
   "Use Tab Color" : false,
-  "Columns" : 180,
-  "Visual Bell" : true,
+  "Columns" : 160,
+  "Visual Bell" : false,
   "Custom Directory" : "No",
   "Thin Strokes" : 4,
   "Ansi 5 Color" : {
