@@ -1,0 +1,9 @@
+[Unit]
+Description=dynv6 update timer
+
+[Timer]
+OnUnitActiveSec=15min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

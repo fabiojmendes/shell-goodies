@@ -1,0 +1,7 @@
+[Unit]
+Description=Update dynv6 DNS Entries
+
+[Service]
+Type=oneshot
+EnvironmentFile=/etc/default/dynv6
+ExecStart=/usr/local/sbin/dynv6.sh ${DYNAV6_HOST}

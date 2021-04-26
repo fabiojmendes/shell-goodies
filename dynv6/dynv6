@@ -1,0 +1,3 @@
+# dynv6 configs
+DYNAV6_TOKEN="auth-token"
+DYNAV6_HOST="host.dynv6.net"
