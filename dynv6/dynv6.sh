@@ -21,11 +21,11 @@ if [[ -z "$address" ]]; then
   echo "no IPv4 address found"
   exit 1
 elif [[ "$old" == "$address" ]]; then
-  echo "IPv4 address unchanged"
+  echo "IP $address unchanged, skipping update"
   exit
 fi
 
-echo "Executing update..."
+echo "Executing update from $old to $address"
 
 # update dynv6
 curl "https://ipv4.dynv6.com/api/update" --fail -sS -G \
