@@ -1,1 +1,4 @@
-
+#compdef rustup
+if [ $commands[rustup] ]; then
+  source <(rustup completions zsh)
+fi
