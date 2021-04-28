@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env zsh -e
 
 # Clone using
 # git clone https://github.com/fabiojmendes/shell-goodies .shell-goodies
@@ -55,5 +55,11 @@ sed -i.bkp \
   $HOME/.zshrc
 
 grep -qe '^export EDITOR="vim"' $HOME/.zshrc || echo 'export EDITOR="vim"' >> $HOME/.zshrc
+
+echo "Setting git configs"
+git config --global user.email "fabiojmendes@gmail.com"
+git config --global user.name "Fabio Mendes"
+git config --global rebase.autoStash true
+git config --global pull.rebase true
 
 echo "Done"
