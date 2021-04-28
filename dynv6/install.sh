@@ -25,4 +25,12 @@ systemctl daemon-reload
 systemctl enable dynv6.timer
 systemctl start dynv6.timer
 
+echo "Installing weekly cache clear"
+target=/etc/cron.weekly
+if [[ -d $target ]]; then
+  cp dynv6-cache $target
+else
+  echo "$target not found"
+fi
+
 echo "Instalation completed"

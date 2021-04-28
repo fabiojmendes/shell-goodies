@@ -1,0 +1,7 @@
+#!/bin/bash -e
+
+# Clear the cache to force update
+
+file=/var/cache/dynv6/addr4
+
+[[ -f $file ]] && echo '' > $file
