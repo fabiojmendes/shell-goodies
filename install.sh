@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh -e
+#!/bin/zsh -e
 
 # Clone using
 # git clone https://github.com/fabiojmendes/shell-goodies .shell-goodies
@@ -10,10 +10,11 @@ install_pack() {
   local target=$VIM_PACK/$(basename $url)
   if [[ ! -d $target ]]; then
     git clone $url $target
-    vim -u NONE -c ":helptags $target/doc" -c q
   else
-    echo "$(basename $target) already exists"
+    echo "$(basename $target) already exists. Updating..."
+    (cd $target && git pull)
   fi
+  vim -u NONE -c ":helptags $target/doc" -c q
 }
 
 install_link() {
@@ -43,10 +44,10 @@ install_link ".shell-goodies/vim/vimrc"
 install_link ".shell-goodies/dot-rc/tmux.conf"
 install_link ".shell-goodies/dot-rc/gdbinit"
 
-if [[ ! -f $HOME/.gdb_dashboard ]]; then
+#if [[ ! -f $HOME/.gdb_dashboard ]]; then
   echo "Installing gdb dashboard"
-  curl -L -o $HOME/.gdb_dashboard https://git.io/.gdbinit
-fi
+  curl -sSL -o $HOME/.gdb_dashboard https://git.io/.gdbinit
+#fi
 
 sed -i.bkp \
   -e 's/ZSH_THEME=".*"/ZSH_THEME="fabio"/' \
@@ -56,10 +57,12 @@ sed -i.bkp \
 
 grep -qe '^export EDITOR="vim"' $HOME/.zshrc || echo 'export EDITOR="vim"' >> $HOME/.zshrc
 
-echo "Setting git configs"
-git config --global user.email "fabiojmendes@gmail.com"
-git config --global user.name "Fabio Mendes"
-git config --global rebase.autoStash true
-git config --global pull.rebase true
+if [[ ! -f $HOME/.gitconfig ]]; then
+  echo "Setting git configs"
+  git config --global user.email "fabiojmendes@gmail.com"
+  git config --global user.name "Fabio Mendes"
+  git config --global rebase.autoStash true
+  git config --global pull.rebase true
+fi
 
 echo "Done"
