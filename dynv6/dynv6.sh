@@ -15,7 +15,8 @@ fi
 
 old=$(<$file)
 
-address=$(dig +short myip.opendns.com @resolver1.opendns.com)
+# address=$(dig +short myip.opendns.com @resolver1.opendns.com)
+address=$(upnpc -u 'http://10.0.0.1:5000/Public_UPNP_gatedesc.xml' -s | awk '/ExternalIPAddress/ {print $3}')
 
 if [[ -z "$address" ]]; then
   echo "no IPv4 address found"
