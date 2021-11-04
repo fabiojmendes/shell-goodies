@@ -1,0 +1,4 @@
+#compdef confluent
+if [ $commands[confluent] ]; then
+  source <(confluent completion zsh)
+fi

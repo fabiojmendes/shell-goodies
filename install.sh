@@ -44,18 +44,17 @@ install_link ".shell-goodies/vim/vimrc"
 install_link ".shell-goodies/dot-rc/tmux.conf"
 install_link ".shell-goodies/dot-rc/gdbinit"
 
-#if [[ ! -f $HOME/.gdb_dashboard ]]; then
-  echo "Installing gdb dashboard"
-  curl -sSL -o $HOME/.gdb_dashboard https://git.io/.gdbinit
-#fi
+echo "Installing gdb dashboard"
+curl -sSL -o $HOME/.gdb_dashboard https://git.io/.gdbinit
 
-sed -i.bkp \
-  -e 's/ZSH_THEME=".*"/ZSH_THEME="fabio"/' \
-  -e 's/# ZSH_CUSTOM=.*/ZSH_CUSTOM=$HOME\/.shell-goodies\/zsh/' \
-  -e 's/^plugins=(.*)/plugins=(dotenv)/' \
-  $HOME/.zshrc
-
-grep -qe '^export EDITOR="vim"' $HOME/.zshrc || echo 'export EDITOR="vim"' >> $HOME/.zshrc
+if ! grep -qe 'ZSH_THEME="fabio"' $HOME/.zshrc; then
+  sed -i.bkp \
+    -e 's/ZSH_THEME=".*"/ZSH_THEME="fabio"/' \
+    -e 's/# ZSH_CUSTOM=.*/ZSH_CUSTOM=$HOME\/.shell-goodies\/zsh/' \
+    -e 's/^plugins=(.*)/plugins=(dotenv)/' \
+    $HOME/.zshrc
+    echo 'export EDITOR="vim"' >> $HOME/.zshrc
+fi
 
 if [[ ! -f $HOME/.gitconfig ]]; then
   echo "Setting git configs"
