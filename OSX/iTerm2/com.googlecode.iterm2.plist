@@ -38,21 +38,62 @@
 			<key>Version</key>
 			<integer>0</integer>
 		</dict>
-		<key>0xf700-0x300000</key>
+		<key>0xf700-0x2c0000-0x7e</key>
 		<dict>
 			<key>Action</key>
-			<integer>7</integer>
+			<integer>20</integer>
+			<key>Label</key>
+			<string></string>
 			<key>Text</key>
 			<string></string>
+			<key>Version</key>
+			<integer>1</integer>
 		</dict>
-		<key>0xf701-0x300000</key>
+		<key>0xf700-0x380000-0x7e</key>
 		<dict>
 			<key>Action</key>
-			<integer>6</integer>
+			<integer>13</integer>
+			<key>Label</key>
+			<string></string>
 			<key>Text</key>
 			<string></string>
+			<key>Version</key>
+			<integer>1</integer>
 		</dict>
-		<key>0xf702-0x300000-0x7b</key>
+		<key>0xf701-0x2c0000-0x7d</key>
+		<dict>
+			<key>Action</key>
+			<integer>21</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string></string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
+		<key>0xf701-0x380000-0x7d</key>
+		<dict>
+			<key>Action</key>
+			<integer>13</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string></string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
+		<key>0xf702-0x2c0000-0x7b</key>
+		<dict>
+			<key>Action</key>
+			<integer>18</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string></string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
+		<key>0xf702-0x380000-0x7b</key>
 		<dict>
 			<key>Action</key>
 			<integer>2</integer>
@@ -60,15 +101,21 @@
 			<string></string>
 			<key>Text</key>
 			<string></string>
+			<key>Version</key>
+			<integer>0</integer>
 		</dict>
-		<key>0xf702-0x320000</key>
+		<key>0xf703-0x2c0000-0x7c</key>
 		<dict>
 			<key>Action</key>
-			<integer>33</integer>
+			<integer>19</integer>
+			<key>Label</key>
+			<string></string>
 			<key>Text</key>
 			<string></string>
+			<key>Version</key>
+			<integer>1</integer>
 		</dict>
-		<key>0xf703-0x300000-0x7c</key>
+		<key>0xf703-0x380000-0x7c</key>
 		<dict>
 			<key>Action</key>
 			<integer>0</integer>
@@ -76,13 +123,8 @@
 			<string></string>
 			<key>Text</key>
 			<string></string>
-		</dict>
-		<key>0xf703-0x320000</key>
-		<dict>
-			<key>Action</key>
-			<integer>34</integer>
-			<key>Text</key>
-			<string></string>
+			<key>Version</key>
+			<integer>0</integer>
 		</dict>
 		<key>0xf729-0x100000</key>
 		<dict>
@@ -98,24 +140,10 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0xf72c-0x100000</key>
-		<dict>
-			<key>Action</key>
-			<integer>9</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
 		<key>0xf72c-0x20000</key>
 		<dict>
 			<key>Action</key>
 			<integer>9</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf72d-0x100000</key>
-		<dict>
-			<key>Action</key>
-			<integer>8</integer>
 			<key>Text</key>
 			<string></string>
 		</dict>
@@ -2098,6 +2126,8 @@
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.18854812738549623</real>
+	<key>SwitchWindowModifier</key>
+	<integer>9</integer>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>5</integer>
 	<key>TmuxUsesDedicatedProfile</key>
