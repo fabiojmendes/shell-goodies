@@ -8,6 +8,8 @@ set history size 10000
 set history remove-duplicates unlimited
 set history filename ~/.gdb_history
 
+set print asm-demangle on
+
 source ~/.gdb_dashboard
 dashboard registers -style column-major True
 dashboard variables -style compact False
