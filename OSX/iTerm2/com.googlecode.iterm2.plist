@@ -14,6 +14,8 @@
 	<string>501BCDEC-8322-463A-8179-866A4721A805</string>
 	<key>DimBackgroundWindows</key>
 	<false/>
+	<key>DimInactiveSplitPanes</key>
+	<false/>
 	<key>DimOnlyText</key>
 	<true/>
 	<key>GlobalKeyMap</key>
