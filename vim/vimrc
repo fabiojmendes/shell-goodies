@@ -2,6 +2,7 @@
 syntax enable
 set background=dark
 set nocompatible
+set hidden
 set mouse=a
 
 set modeline
@@ -33,7 +34,16 @@ au BufNewFile,BufRead */systemd/*.{automount,mount,path,service,socket,swap,targ
 
 " KeyBindings
 " Move between buffers
-nnoremap <C-Left> :bprevious<CR>
-nnoremap <C-Right> :bnext<CR>
+nnoremap <S-H> :bprev<CR>
+nnoremap <S-L> :bnext<CR>
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>
+
+" Better cursor
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+set ttimeout
+set ttimeoutlen=1
+set ttyfast
