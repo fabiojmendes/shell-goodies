@@ -14,7 +14,7 @@ install_pack() {
     git clone $url $target
   else
     echo "$(basename $target) already exists. Updating..."
-    (cd $target && git pull)
+    git -C $target pull
   fi
   vim -u NONE -c ":helptags $target/doc" -c q
 }
@@ -69,7 +69,7 @@ fi
 echo 'Installing neovim config'
 nvim_config="$HOME/.config/nvim"
 if [[ -d "$nvim_config" ]]; then
-  (cd $nvim_config && git pull)
+  git -C $nvim_config pull
 else
   git clone https://github.com/fabiojmendes/nvim $nvim_config
 fi
