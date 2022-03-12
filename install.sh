@@ -1,4 +1,6 @@
-#!/bin/zsh -e
+#!/bin/sh
+
+set -euo pipefail
 
 # Clone using
 # git clone https://github.com/fabiojmendes/shell-goodies .shell-goodies
@@ -62,6 +64,14 @@ if [[ ! -f $HOME/.gitconfig ]]; then
   git config --global user.name "Fabio Mendes"
   git config --global rebase.autoStash true
   git config --global pull.rebase true
+fi
+
+echo 'Installing neovim config'
+nvim_config="$HOME/.config/nvim"
+if [[ -d "$nvim_config" ]]; then
+  (cd $nvim_config && git pull)
+else
+  git clone https://github.com/fabiojmendes/nvim $nvim_config
 fi
 
 echo "Done"
