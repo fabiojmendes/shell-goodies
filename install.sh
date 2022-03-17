@@ -43,7 +43,7 @@ if [[ $(uname) == "Linux" ]]; then
   install_link ".shell-goodies/dot-rc/toprc"
 fi
 install_link ".shell-goodies/vim/vimrc"
-install_link ".shell-goodies/dot-rc/tmux.conf"
+install_link ".shell-goodies/tmux/tmux.conf"
 install_link ".shell-goodies/dot-rc/gdbinit"
 
 echo "Installing gdb dashboard"
