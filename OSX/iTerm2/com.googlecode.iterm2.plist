@@ -369,6 +369,8 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>501BCDEC-8322-463A-8179-866A4721A805</string>
+	<key>DefaultTabStopWidth</key>
+	<integer>4</integer>
 	<key>DimBackgroundWindows</key>
 	<false/>
 	<key>DimInactiveSplitPanes</key>
