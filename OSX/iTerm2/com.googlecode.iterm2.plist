@@ -879,6 +879,8 @@
 			<string>No</string>
 			<key>Description</key>
 			<string>Default</string>
+			<key>Disable Printing</key>
+			<true/>
 			<key>Disable Window Resizing</key>
 			<true/>
 			<key>Draw Powerline Glyphs</key>
@@ -2451,6 +2453,8 @@
 			<string>/Users/fabio</string>
 		</dict>
 	</array>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
 	<key>PerPaneBackgroundImage</key>
 	<false/>
 	<key>PinchToChangeFontSizeDisabled</key>
@@ -2488,6 +2492,8 @@
 			<string>kNextWindowPointerAction</string>
 		</dict>
 	</dict>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>ShowPaneTitles</key>

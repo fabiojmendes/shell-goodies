@@ -52,8 +52,8 @@ curl -sSL -o $HOME/.gdb_dashboard https://git.io/.gdbinit
 if ! grep -qe 'ZSH_THEME="fabio"' $HOME/.zshrc; then
   sed -i.bkp \
     -e 's/ZSH_THEME=".*"/ZSH_THEME="fabio"/' \
-    -e 's/# ZSH_CUSTOM=.*/ZSH_CUSTOM=$HOME\/.shell-goodies\/zsh/' \
-    -e 's/^plugins=(.*)/plugins=(dotenv)/' \
+    -e 's/# ZSH_CUSTOM=.*/ZSH_CUSTOM=$HOME\/.shell-goodies\/zsh\nZSH_DISABLE_COMPFIX="true"/' \
+    -e 's/^plugins=(.*)/plugins=(dotenv zsh-syntax-highlighting)/' \
     $HOME/.zshrc
     echo 'export EDITOR="vim"' >> $HOME/.zshrc
 fi
