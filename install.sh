@@ -50,9 +50,10 @@ echo "Installing gdb dashboard"
 curl -sSL -o $HOME/.gdb_dashboard https://git.io/.gdbinit
 
 if ! grep -qe 'ZSH_THEME="fabio"' $HOME/.zshrc; then
-  sed -i.bkp \
-    -e 's/ZSH_THEME=".*"/ZSH_THEME="fabio"/' \
-    -e 's/# ZSH_CUSTOM=.*/ZSH_CUSTOM=$HOME\/.shell-goodies\/zsh\nZSH_DISABLE_COMPFIX="true"/' \
+  sed -Ei.bkp \
+    -e 's/^ZSH_THEME=".*"/ZSH_THEME="fabio"/' \
+    -e 's/^# ZSH_CUSTOM=.*/ZSH_CUSTOM=$HOME\/.shell-goodies\/zsh\nZSH_DISABLE_COMPFIX="true"/' \
+    -e "s/^# (zstyle ':omz:update' mode auto.*)/\1/" \
     -e 's/^plugins=(.*)/plugins=(dotenv zsh-syntax-highlighting)/' \
     $HOME/.zshrc
     echo 'export EDITOR="vim"' >> $HOME/.zshrc
