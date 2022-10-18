@@ -1,3 +1,12 @@
+" silent! source $VIMRUNTIME/defaults.vim
+" source $VIMRUNTIME/vimrc_example.vim
+
+" Return to last edit position when opening files (You want this!)
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal! g`\"" |
+     \ endif
+
 " General
 syntax enable
 set background=dark
@@ -47,3 +56,5 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 set ttimeout
 set ttimeoutlen=1
 set ttyfast
+
+source $VIMRUNTIME/defaults.vim
