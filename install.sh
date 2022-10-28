@@ -61,6 +61,7 @@ fi
 
 if [[ ! -f $HOME/.gitconfig ]]; then
   echo "Setting git configs"
+  git config --global init.defaultbranch master
   git config --global user.email "fabiojmendes@gmail.com"
   git config --global user.name "Fabio Mendes"
   git config --global rebase.autoStash true
