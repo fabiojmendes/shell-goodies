@@ -57,4 +57,11 @@ set ttimeout
 set ttimeoutlen=1
 set ttyfast
 
+" Diff colorscheme
+" 65 = DarkSeaGreen4, 52 = DarkRed, 23 = DeepSkyBlue4
+highlight DiffAdd    cterm=none ctermfg=none ctermbg=65
+highlight DiffDelete cterm=none ctermfg=none ctermbg=52
+highlight DiffChange cterm=none ctermfg=none ctermbg=none
+highlight DiffText   cterm=none ctermfg=none ctermbg=23
+
 source $VIMRUNTIME/defaults.vim
