@@ -38,6 +38,7 @@ fi
 install_pack "https://github.com/vim-airline/vim-airline"
 install_pack "https://github.com/vim-airline/vim-airline-themes"
 install_pack "https://github.com/preservim/nerdtree"
+install_pack "https://github.com/dag/vim-fish"
 
 if [[ $(uname) == "Linux" ]]; then
   install_link ".shell-goodies/dot-rc/toprc"
